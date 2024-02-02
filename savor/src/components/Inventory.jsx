@@ -33,22 +33,22 @@ function Inventory() {
         <div>
             <h2>Inventory</h2>
             <table>
-            <thead>
-                <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                {items.map((item) => (
-                <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>Ksh. {item.price.toFixed(2)}</td>
-                    <td><button onClick={() => deleteItem(item.id)}>Delete</button></td>
-                </tr>
-                ))}
-            </tbody>
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {items.map((item) => (
+                    <tr key={item.id}>
+                        <td>{item.name}</td>
+                        <td>Ksh. {item.price.toFixed(2)}</td>
+                        <td><button onClick={() => deleteItem(item.id)}>Delete</button></td>
+                    </tr>
+                    ))}
+                </tbody>
             </table>
             <div>
                 <input type="text" value={newItemName} onChange={handleNewItemChange} />

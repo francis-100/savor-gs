@@ -24,10 +24,11 @@ function Inventory() {
 
     const handleNewItemChange = (event) => {
         setNewItemName(event.target.value);
-    }
+    };
+
     const handleNewPriceChange = (event) => {
         setNewPrice(event.target.value);
-    }
+    };
 
     return (
         <div>
@@ -56,7 +57,7 @@ function Inventory() {
                 <button onClick={addItem}>Add Item</button>
             </div>
         </div>
-    )
+    );
 }
 
 export default Inventory;

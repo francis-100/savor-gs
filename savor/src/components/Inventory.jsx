@@ -3,6 +3,8 @@ import data from "./files/inventory.json";
 
 function Inventory() {
     const [items, setItems] = useState([]);
+    const [newItemName, setNewItemName] = useState("");
+    const [newPrice, setNewPrice] = useState("");
 
     useEffect(() => {
         setItems(data);
@@ -14,19 +16,45 @@ function Inventory() {
     };
 
     const addItem = () => {
-        const newItem = { id: items.length + 1, name: `Item ${items.length + 1}` };
+        const newItem = { id: items.length + 1, name: newItemName, price: newPrice };
         setItems([...items, newItem]);
+        setNewItemName("");
+        setNewPrice("");
     };
+
+    const handleNewItemChange = (event) => {
+        setNewItemName(event.target.value);
+    }
+    const handleNewPriceChange = (event) => {
+        setNewPrice(event.target.value);
+    }
 
     return (
         <div>
-            {items.map((item) => (
-                <div key={item.id}>
-                    <h3>{item.name}</h3>
-                    <button onClick={() => deleteItem(item.id)}>Delete</button>
-                </div>
-            ))}
-            <button onClick={addItem}> Add Item</button>
+            <h2>Inventory</h2>
+            <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {items.map((item) => (
+                <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>Ksh. {item.price.toFixed(2)}</td>
+                    <td><button onClick={() => deleteItem(item.id)}>Delete</button></td>
+                </tr>
+                ))}
+            </tbody>
+            </table>
+            <div>
+                <input type="text" value={newItemName} onChange={handleNewItemChange} />
+                <input type="number" value={newPrice} onChange={handleNewPriceChange} />
+                <button onClick={addItem}>Add Item</button>
+            </div>
         </div>
     )
 }

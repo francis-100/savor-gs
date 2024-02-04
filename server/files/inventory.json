@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Chapati",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "name": "Fries",
+    "price": 150
+  },
+  {
+    "id": 3,
+    "name": "Soup",
+    "price": 30
+  },
+  {
+    "id": 4,
+    "name": "Rice",
+    "price": 90
+  },
+  {
+    "id": 5,
+    "name": "Ugali",
+    "price": "123.00"
+  },
+  {
+    "id": 6,
+    "name": "Mandondo",
+    "price": "127.00"
+  },
+  {
+    "id": 7,
+    "name": "Beans",
+    "price": "60"
+  },
+  {
+    "id": 8,
+    "name": "Smocha",
+    "price": 120
+  }
+]

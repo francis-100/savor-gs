@@ -21,7 +21,7 @@ function Inventory() {
 
     const deleteItem = async (id) => {
         try {
-            await axios.delete('http://localhost:5000/api/inventory/${id}');
+            await axios.delete(`http://localhost:5000/api/inventory/${id}`);
             fetchData();
         } catch (error) {
             console.error('Error deleting item:', error);

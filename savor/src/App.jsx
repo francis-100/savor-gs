@@ -1,18 +1,4 @@
-// import Dashboard from './components/Dashboard';
-// import Inventory from './components/Inventory'
-
-// function App() {
-//     return (
-//         <>
-//             <div>
-//                 <h1>Welcome</h1>
-//             </div>
-//             < Inventory />
-//         </>
-//     );
-// };
-// export default App; 
-import React, { componrnts } from "react";
+import React, { components } from "react";
 import {
     BrowserRouter as Router,
     Routes,

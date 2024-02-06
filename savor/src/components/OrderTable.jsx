@@ -10,14 +10,6 @@ const OrderTable = ({ selectedItems, quantities, total, formData, isOrderUpdated
 
   const filteredQuantities = quantities.filter(quantity => quantity !== 0);
 
-  useEffect(() => {
-    console.log('Quantities:', quantities);
-  }, [quantities]);
-
-  useEffect(() => {
-    console.log('selectedItems', selectedItems);
-  }, [selectedItems]);
-
   return (
     <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
       <h2 className="text-2xl font-bold mb-4">{isUpdate ? 'Order Updated' : 'Your Order'}</h2>

@@ -5,6 +5,7 @@ function Inventory() {
     const [items, setItems] = useState([]);
     const [newItemName, setNewItemName] = useState("");
     const [newPrice, setNewPrice] = useState("");
+    const [newCategory, setNewCategory] = useState("");
 
     useEffect(() => {
         fetchData();
@@ -33,6 +34,7 @@ function Inventory() {
             const newItem = {
                 name: newItemName,
                 price: parseInt(newPrice, 10),
+                category: newCategory,
             };
 
             await axios.post('http://localhost:5000/api/inventory', newItem);
@@ -40,6 +42,7 @@ function Inventory() {
             fetchData();
             setNewItemName('');
             setNewPrice('');
+            setNewCategory('');
         } catch (error) {
             console.error('Error adding item:', error);
         }
@@ -53,23 +56,27 @@ function Inventory() {
         setNewPrice(event.target.value);
     };
 
+    const handleNewCategoryChange = (event) => {
+        setNewCategory(event.target.value);
+    };
+
     return (
         <div>
             <h2>Inventory</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Category</th>
                     </tr>
                 </thead>
                 <tbody>
                     {items.map((item) => (
                     <tr key={item.id}>
-                        <td>{item.id}</td>
                         <td>{item.name}</td>
                         <td>{typeof item.price === 'number' ? `Ksh. ${item.price.toFixed(2)}` : 'Invalid Price'}</td>
+                        <td>{item.category}</td>
                         <td>
                             <button onClick={() => deleteItem(item.id)}>Delete</button>
                         </td>
@@ -92,6 +99,19 @@ function Inventory() {
                     value={newPrice}
                     onChange={handleNewPriceChange}
                 />
+                <label htmlFor="itemPrice">Item Category:</label>
+                <select
+                    type="text"
+                    id="itemCategory"
+                    value={newCategory}
+                    onChange={handleNewCategoryChange}
+                    required
+                >
+                    <option value="" disabled hidden>Select Category</option>
+                    <option value="Main Course">Main Course</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="Dessert">Dessert</option>
+                </select>
                 <button onClick={addItem}>Add Item</button>
             </div>
         </div>

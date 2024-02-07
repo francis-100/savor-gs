@@ -18,12 +18,6 @@
     "category": "Drinks"
   },
   {
-    "id": 4,
-    "name": "Mango Juice",
-    "price": 2,
-    "category": "Drinks"
-  },
-  {
     "id": 5,
     "name": "Ice Cream",
     "price": 5,
@@ -46,5 +40,11 @@
     "name": "Boba",
     "price": 6,
     "category": "Dessert"
+  },
+  {
+    "id": "6c61a640-94db-4fa9-99b1-d109ed131288",
+    "name": "Passion Juice",
+    "price": 10,
+    "category": "Drinks"
   }
 ]

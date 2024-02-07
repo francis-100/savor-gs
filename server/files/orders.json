@@ -74,5 +74,27 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "id": "4507595d-abed-4c4a-b387-3de7c3acac8f",
+    "name": "Himeth",
+    "phone": "0127757654",
+    "location": "White House",
+    "table": null,
+    "total": 20,
+    "orders": [
+      {
+        "name": "Pizza",
+        "quantity": 1
+      },
+      {
+        "name": "Coke",
+        "quantity": 1
+      },
+      {
+        "name": "Mango Juice",
+        "quantity": 3
+      }
+    ]
   }
 ]

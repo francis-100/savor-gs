@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
-function readOrder() {
+function Orders() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ function readOrder() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/order');
+            const response = await axios.get('http://localhost:5000/api/orders');
             setItems(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
@@ -19,29 +19,41 @@ function readOrder() {
 
     return (
         <div>
-            <h2>Order</h2>
+            <h2>Orders</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Phone</th>
-                        <th>Onsite</th>
-                        <th>Table/Location</th>
+                        <th>Location</th>
+                        <th>Table</th>
+                        <th>Total</th>
+                        <th>Orders</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {items.map((item) => (
-                        <tr key={item.id}>
-                            <td>{item.id}</td>
-                            <td>{item.name}</td>
-                            <td>{item.phone}</td>
-                            <td>{item.onsite}</td>
-                            <td>{item.table}</td>
+                    {items.map((order) => (
+                        <tr key={order.id}>
+                            <td>{order.name}</td>
+                            <td>{order.phone}</td>
+                            <td>{order.location}</td>
+                            <td>{order.table || 'N/A'}</td>
+                            <td>{typeof order.total === 'number' ? `Ksh. ${order.total.toFixed(2)}` : 'Invalid Price'}</td>
+                            <td>
+                                <ul>
+                                    {order.orders.map((item, index) => (
+                                        <li key={index}>
+                                            {item.name}: {item.quantity}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </div>
-    )
+    );
 }
+
+export default Orders;

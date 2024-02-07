@@ -73,13 +73,19 @@ const OrderForm = ({ onSubmit }) => {
         {isOnsite ? (
           <label className="block mb-4">
             <span className="text-lg">Table:</span>
-            <input
-              type="number"
+            <select
               value={tableNumber}
               onChange={(e) => setTableNumber(e.target.value)}
               className="w-full border p-2 rounded-md"
               required
-            />
+            >
+              <option value="" disabled hidden>
+                Select Table
+              </option>
+              <option value="Table 1">Table 1</option>
+              <option value="Table 2">Table 2</option>
+              <option value="Table 3">Table 3</option>
+            </select>
           </label>
         ) : (
           <label className="block mb-4">
@@ -93,8 +99,9 @@ const OrderForm = ({ onSubmit }) => {
               <option value="" disabled hidden>
                 Select Location
               </option>
-              <option value="Sample Location 1">Texas</option>
-              <option value="Sample Location 2">New York</option>
+              <option value="Lexis">Lexis</option>
+              <option value="Kapken">Kapken</option>
+              <option value="White House">White House</option>
               {/* Add more options as needed */}
             </select>
           </label>

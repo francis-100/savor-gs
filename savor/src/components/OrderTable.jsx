@@ -19,7 +19,6 @@ const OrderTable = ({ selectedItems, quantities, total, formData, isOrderUpdated
             <th className="border px-4 py-2">Food</th>
             <th className="border px-4 py-2">Quantity</th>
             <th className="border px-4 py-2">Price</th>
-            <th className="border px-4 py-2">Location/Table No.</th>
             <th className="border px-4 py-2">Total</th>
           </tr>
         </thead>
@@ -30,13 +29,6 @@ const OrderTable = ({ selectedItems, quantities, total, formData, isOrderUpdated
                 <td className="border px-4 py-2">{item.name}</td>
                 <td className="border px-4 py-2">{filteredQuantities[index]}</td>
                 <td className="border px-4 py-2">Ksh. {item.price}</td>
-                <td className="border px-4 py-2">
-                  {formData && formData.isOnsite
-                    ? formData.tableNumber || 'Default Table'
-                    : formData && formData.location
-                    ? formData.location
-                    : 'Default Location'}
-                </td>
                 <td className="border px-4 py-2">Ksh. {item.price * filteredQuantities[index]}</td>
               </tr>
             );

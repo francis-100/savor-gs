@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Menu from './Menu';
 import OrderTable from './OrderTable';
 import OrderForm from './OrderForm';
+import Footer from './Footer';
 import axios from "axios";
 
 const Home = () => {
@@ -49,10 +50,12 @@ const Home = () => {
     };
 
     return (
-        <div>
-        <Menu addToOrder={addToOrder} />
-        <OrderTable {...order} formData={formData} isOrderUpdated={isOrderUpdated} />
-        <OrderForm onSubmit={submitForm} />
+        <div className="bg-slate-100 text-black">
+            <h1 className="text-black text-center p-6 mt-6">HOME PAGE</h1>
+            <Menu addToOrder={addToOrder} />
+            <OrderTable {...order} formData={formData} isOrderUpdated={isOrderUpdated} />
+            <OrderForm onSubmit={submitForm} />
+            <Footer />
         </div>
     );
 };

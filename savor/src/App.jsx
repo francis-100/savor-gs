@@ -11,8 +11,8 @@ import Dashboard from "./components/Dashboard";
 function App() {
     return (
         <Router>
-            <div className="App">
-                <ul className="App-header">
+            <div className="bg-zinc-800 text-white mb-2 p-6 text-center">
+                <ul>
                     <li>
                         <Link to="/">Home</Link>
                     </li>

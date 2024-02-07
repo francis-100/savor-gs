@@ -1,42 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Chapati",
-    "price": 25
+    "name": "Pizza",
+    "price": 12,
+    "category": "Main Course"
   },
   {
     "id": 2,
-    "name": "Fries",
-    "price": 150
+    "name": "Burger",
+    "price": 8,
+    "category": "Main Course"
   },
   {
     "id": 3,
-    "name": "Soup",
-    "price": 30
+    "name": "Coke",
+    "price": 2,
+    "category": "Drinks"
   },
   {
     "id": 4,
-    "name": "Rice",
-    "price": 90
+    "name": "Mango Juice",
+    "price": 2,
+    "category": "Drinks"
   },
   {
     "id": 5,
-    "name": "Ugali",
-    "price": "123.00"
+    "name": "Ice Cream",
+    "price": 5,
+    "category": "Dessert"
   },
   {
     "id": 6,
-    "name": "Mandondo",
-    "price": "127.00"
+    "name": "Pie",
+    "price": 8,
+    "category": "Dessert"
   },
   {
-    "id": 7,
-    "name": "Beans",
-    "price": "60"
+    "id": "d5911304-07f6-473b-bc84-9f15ad750d2a",
+    "name": "Ugali",
+    "price": 10,
+    "category": "Main Course"
   },
   {
-    "id": 8,
-    "name": "Smocha",
-    "price": 120
+    "id": "04f3000c-67b8-44a7-af1a-92ba610d6fcd",
+    "name": "Boba",
+    "price": 6,
+    "category": "Dessert"
   }
 ]

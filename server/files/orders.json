@@ -1,0 +1,78 @@
+[
+  {
+    "id": "g7461562-3b17-4594-8f91-b5788c236ffc",
+    "name": "Nyareki",
+    "phone": "0758265373",
+    "location": "Table 2",
+    "table": "Table 2",
+    "total": 16,
+    "orders": [
+      {
+        "name": "Pizza",
+        "quantity": 1
+      },
+      {
+        "name": "Coke",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "a1349c95-cf63-4cad-bd3d-850eef44a2c9",
+    "name": "Injili",
+    "phone": "0756778875",
+    "location": "Table 2",
+    "table": "Table 2",
+    "total": 50,
+    "orders": [
+      {
+        "name": "Pizza",
+        "quantity": 2
+      },
+      {
+        "name": "Mango Juice",
+        "quantity": 1
+      },
+      {
+        "name": "Pie",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "id": "7d461562-3b17-4594-8f01-b5888c236ffc",
+    "name": "Nyareki",
+    "phone": "0748967443",
+    "location": "Lexis",
+    "table": null,
+    "total": 14,
+    "orders": [
+      {
+        "name": "Pizza",
+        "quantity": 1
+      },
+      {
+        "name": "Mango Juice",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "f5f4bcf0-1a94-457b-8a44-837f6d521164",
+    "name": "Nyangaresi",
+    "phone": "0778655723",
+    "location": "Kapken",
+    "table": null,
+    "total": 14,
+    "orders": [
+      {
+        "name": "Pizza",
+        "quantity": 1
+      },
+      {
+        "name": "Mango Juice",
+        "quantity": 1
+      }
+    ]
+  }
+]
